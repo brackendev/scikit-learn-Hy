@@ -1,0 +1,18 @@
+root = true
+
+[*]
+end_of_line = lf
+insert_final_newline = true
+
+[*.{hy,py}]
+charset = utf-8
+
+# http://docs.hylang.org/en/stable/style-guide.html
+[*.hy]
+indent_style = space
+indent_size = 2
+
+# http://google.github.io/styleguide/pyguide.html
+[*.py]
+indent_style = space
+indent_size = 4
