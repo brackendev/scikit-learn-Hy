@@ -19,7 +19,7 @@ $ pytest scikit_learn_tests.py
 
 ## Example Usage
 
-Via a command shell (in the project directory), open a Hy REPL and import scikit_learn.hy. For example:
+Via a command shell (in the project directory), open a Hy REPL. For example:
 
 ```bash
 $ source env/bin/activate
@@ -40,15 +40,8 @@ ScikitLearn-Hy is released under the BSD 3-Clause license. See the LICENSE file 
 
 - - -
 
-The following is based on [An introduction to machine learning with scikit-learn](https://scikit-learn.org/stable/tutorial/basic/tutorial.html).
-
 An introduction to machine learning with scikit-learn and Hy
 ===
-
-#### Section contents
-
-In this section, we introduce the [machine learning](https://en.wikipedia.org/wiki/Machine_learning) vocabulary that we use throughout scikit-learn and give a simple learning example.
-
 
 Machine learning: the problem setting
 -------------------------------------
