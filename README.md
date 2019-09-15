@@ -45,7 +45,7 @@ See the `scikit_learn.hy` file for all available functions.
 
 ## License
 
-scikit-learn-Hy is released under the BSD 3-Clause license. See the LICENSE file for more info.
+scikit-learn-Hy is released under the BSD 3-Clause license. See the `LICENSE` file for more info.
 
 - - -
 
