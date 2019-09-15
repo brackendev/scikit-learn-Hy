@@ -25,7 +25,7 @@ $ pytest scikit_learn_tests.py
 
 ## Example Usage
 
-Next, follow the [introduction](#an-introduction-to-machine-learning-with-scikit-learn-and-hy) below.
+Follow the [introduction](#an-introduction-to-machine-learning-with-scikit-learn-and-hy) below.
 
 Additionally, the example code in the introduction is also available in the `scikit_learn` Hy module. To execute it, for example:
 
