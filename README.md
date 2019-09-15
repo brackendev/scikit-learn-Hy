@@ -19,8 +19,8 @@ $ pip install -r requirements.txt
 To run the tests, execute:
 
 ```bash
+$ source env/bin/activate
 $ pytest scikit_learn_tests.py
-$ pip install -r requirements.txt
 ```
 
 ## Example Usage
