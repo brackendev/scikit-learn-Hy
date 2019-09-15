@@ -14,7 +14,6 @@ It is assumed that [Python 3.7](https://www.python.org/downloads/release/python-
 $ virtualenv env -p python3.7
 $ source env/bin/activate
 $ pip install -r requirements.txt
-$ pytest scikit_learn_tests.py
 ```
 
 ## Example Usage
