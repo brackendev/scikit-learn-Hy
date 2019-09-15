@@ -25,16 +25,7 @@ $ pytest scikit_learn_tests.py
 
 ## Example Usage
 
-Via a command shell (in the project directory), open a Hy REPL. For example:
-
-```bash
-$ source env/bin/activate
-$ hy
-hy 0.17.0+80.g45bb0ff using CPython(default) 3.7.4 on Darwin
-=>
-```
-
-Next, follow the introduction below using the Hy REPL. The sample code in the introduction can also be executed in the Hy REPL. For example:
+Next, follow the introduction below. Alternatively, the sample code in the introduction can also be executed in the Hy REPL by importing the `scikit_learn` Hy module. For example:
 
 ```hy
 => (import scikit_learn)
@@ -125,6 +116,7 @@ load the ``iris`` and ``digits`` datasets.  Our notational convention is that
 REPL prompt:
 
 ```hy
+$ source env/bin/activate
 $ hy
 => (import [sklearn [datasets]])
 => (setv iris (datasets.load-iris))
