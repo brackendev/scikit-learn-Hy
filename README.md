@@ -1,4 +1,4 @@
-ScikitLearn-Hy
+scikit-learn-Hy
 ===
 
 **An introduction to machine learning with [scikit-learn](https://www.scikit-learn.org/) and Hy (instead of Python).**
@@ -36,7 +36,7 @@ Next, follow the introduction below using the Hy REPL.
 
 ## License
 
-ScikitLearn-Hy is released under the BSD 3-Clause license. See the LICENSE file for more info.
+scikit-learn-Hy is released under the BSD 3-Clause license. See the LICENSE file for more info.
 
 - - -
 
