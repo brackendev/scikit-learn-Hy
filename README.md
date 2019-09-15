@@ -58,7 +58,7 @@ Learning problems fall into a few categories:
  * [supervised learning](https://en.wikipedia.org/wiki/Supervised_learning)
    in which the data comes with additional attributes that we want to predict
    ([Click here](https://scikit-learn.org/stable/supervised_learning.html#supervised-learning)
-   to go to the scikit-learn supervised learning page).This problem
+   to go to the scikit-learn supervised learning page). This problem
    can be either:
 
     * [classification](https://en.wikipedia.org/wiki/Classification_in_machine_learning):
