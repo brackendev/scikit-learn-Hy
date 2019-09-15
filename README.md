@@ -1,7 +1,7 @@
 scikit-learn-Hy
 ===
 
-**An introduction to machine learning with [scikit-learn](https://www.scikit-learn.org/) and Hy (instead of Python).**
+**An introduction to machine learning with [scikit-learn](https://www.scikit-learn.org/) and [Hy](http://hylang.org/), a Lisp dialect embedded in Python.**
 
 * [Hy 0.17.0](http://hylang.org/) and [Python 3.7](https://www.python.org/downloads/release/python-370/) reference platform.
 * Examples are in Hy and tests are in Python (to showcase Hy module support).
