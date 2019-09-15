@@ -34,7 +34,13 @@ hy 0.17.0+80.g45bb0ff using CPython(default) 3.7.4 on Darwin
 =>
 ```
 
-Next, follow the introduction below using the Hy REPL.
+Next, follow the introduction below using the Hy REPL. The sample code in the introduction can also be executed in the Hy REPL. For example:
+
+```hy
+=> (import scikit_learn)
+=> (scikit-learn.learning-and-predicting)
+array([8])
+```
 
 ## Author
 
@@ -118,7 +124,7 @@ load the ``iris`` and ``digits`` datasets.  Our notational convention is that
 ``$`` denotes the shell prompt while ``=>`` denotes the Hy
 REPL prompt:
 
-```
+```hy
 $ hy
 => (import [sklearn [datasets]])
 => (setv iris (datasets.load-iris))
@@ -135,7 +141,7 @@ section <datasets>`.
 For instance, in the case of the digits dataset, ``digits.data`` gives
 access to the features that can be used to classify the digits samples:
 
-```
+```hy
 => (print digits.data)
 [[ 0.  0.  5. ...  0.  0.  0.]
  [ 0.  0.  0. ... 10.  0.  0.]
@@ -150,7 +156,7 @@ and ``digits.target`` gives the ground truth for the digit dataset, that
 is the number corresponding to each digit image that we are trying to
 learn:
 
-```
+```hy
 => (print digits.target)
 [0 1 2 ... 8 9 8]
 ```
@@ -162,7 +168,7 @@ The data is always a 2D array, shape ``(n_samples n_features)``, although
     digits, each original sample is an image of shape ``(8 8)`` and can be
     accessed using:
 
-```
+```hy
 => (first digits.images)
 array([[ 0.,  0.,  5., 13.,  9.,  1.,  0.,  0.],
        [ 0.,  0., 13., 15., 10., 15.,  5.,  0.],
@@ -200,7 +206,7 @@ estimator's constructor takes as arguments the model's parameters.
 
 For now, we will consider the estimator as a black box:
 
-```
+```hy
 => (import [sklearn.svm [SVC]])
 => (setv clf (SVC :gamma 0.001 :C 100))
 ```
@@ -219,7 +225,7 @@ image, which we'll reserve for our predicting. We select the training set with
 the ``all-but-last`` Hy function, which produces a new array that contains all but
 the last item from ``digits.data``:
 
-```
+```hy
 => (defn all-but-last [lst]
 ...   (list (drop-last 1 lst)))
 => (clf.fit (all-but-last digits.data) (all-but-last digits.target))
@@ -233,7 +239,7 @@ Now you can *predict* new values. In this case, you'll predict using the last
 image from ``digits.data``. By predicting, you'll determine the image from the 
 training set that best matches the last image.
 
-```
+```hy
 => (clf.predict (cut digits.data -1))
 array([8])
 ```
@@ -256,7 +262,7 @@ Model persistence
 It is possible to save a model in scikit-learn by using Python's built-in
 persistence model, [pickle](https://docs.python.org/2/library/pickle.html):
 
-```
+```hy
 => (import [sklearn.svm [SVC]])
 => (import [sklearn [datasets]])
 => (setv clf (SVC :gamma "scale"))
@@ -283,7 +289,7 @@ joblib's replacement for pickle (``joblib.dump`` & ``joblib.load``),
 which is more efficient on big data but it can only pickle to the disk
 and not to a string:
 
-```
+```hy
 => (import [joblib [dump load]])
 => (dump clf "filename.joblib")
 ['filename.joblib']
@@ -292,7 +298,7 @@ and not to a string:
 Later, you can reload the pickled model (possibly in another Hy process)
 with:
 
-```
+```hy
 => (setv clf (load "filename.joblib")
 ```
 
@@ -317,7 +323,7 @@ predictive.  These are described in more detail in the [Glossary of Common Terms
 
 Unless otherwise specified, input will be cast to ``float64``:
 
-```
+```hy
 => (import [numpy :as np])
 => (import [sklearn [random_projection]])
 
@@ -338,7 +344,7 @@ In this example, ``x`` is ``float32``, which is cast to ``float64`` by
 Regression targets are cast to ``float64`` and classification targets are
 maintained:
 
-```
+```hy
 => (import [sklearn [datasets]])
 => (import [sklearn.svm [SVC]])
 => (setv iris (datasets.load-iris))
@@ -372,7 +378,7 @@ Hyper-parameters of an estimator can be updated after it has been constructed
 via the [set_params](https://scikit-learn.org/stable/glossary.html#term-set-params) method. Calling ``fit`` more than
 once will overwrite what was learned by any previous ``fit``:
 
-```
+```hy
 => (import [numpy :as np])
 => (import [sklearn.datasets [load_iris]])
 => (import [sklearn.svm [SVC]])
@@ -409,7 +415,7 @@ When using [multiclass classifiers](https://scikit-learn.org/stable/modules/clas
 the learning and prediction task that is performed is dependent on the format of
 the target data fit upon:
 
-```
+```hy
 => (import [sklearn.svm [SVC]])
 => (import [sklearn.multiclass [OneVsRestClassifier]])
 => (import [sklearn.preprocessing [LabelBinarizer]])
@@ -429,7 +435,7 @@ In the above case, the classifier is fit on a 1d array of multiclass labels and
 the ``predict`` function therefore provides corresponding multiclass predictions.
 It is also possible to fit upon a 2d array of binary label indicators:
 
-```
+```hy
 => (setv y (LabelBinarizer))
 => (setv y (y.fit_transform '(0 0 1 1 2)))
 => (classif.fit x y)
@@ -450,7 +456,7 @@ Note that the fourth and fifth instances returned all zeroes, indicating that
 they matched none of the three labels ``fit`` upon. With multilabel outputs, it
 is similarly possible for an instance to be assigned multiple labels:
 
-```
+```hy
 => (import [sklearn.preprocessing [MultiLabelBinarizer]])
 => (setv y (MultiLabelBinarizer))
 => (setv y (y.fit_transform '((0 1) (0 2) (1 3) (0 2 3) (2 4))))
