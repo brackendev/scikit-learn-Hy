@@ -25,7 +25,7 @@ $ pytest scikit_learn_tests.py
 
 ## Example Usage
 
-Next, follow the introduction below.
+Next, follow the [introduction](#an-introduction-to-machine-learning-with-scikit-learn-and-hy) below.
 
 Additionally, the example code in the introduction is also available in the `scikit_learn` Hy module. To execute it, for example:
 
@@ -40,18 +40,18 @@ array([8])
 ```
 
 All available example functions:
-* `learning-and-predicting`
-* `model-persistence`
-* `model-persistence-from-file`
-* `type-casting-32`
-* `type-casting-64`
-* `type-casting-more1`
-* `type-casting-more2`
-* `refitting-and-updating-parameters1`
-* `refitting-and-updating-parameters2`
-* `multiclass-vs-multilabel-fitting1`
-* `multiclass-vs-multilabel-fitting2`
-* `multiclass-vs-multilabel-fitting3`
+* [learning-and-predicting](#choosing-the-parameters-of-the-model)
+* [model-persistence](#model-persistence)
+* [model-persistence-from-file](#model-persistence)
+* [type-casting-32](#type-casting)
+* [type-casting-64](#type-casting)
+* [type-casting-more1](#type-casting)
+* [type-casting-more2](#type-casting)
+* [refitting-and-updating-parameters1](#refitting-and-updating-parameters)
+* [refitting-and-updating-parameters2](#refitting-and-updating-parameters)
+* [multiclass-vs-multilabel-fitting1](#multiclass-vs-multilabel-fitting)
+* [multiclass-vs-multilabel-fitting2](#multiclass-vs-multilabel-fitting)
+* [multiclass-vs-multilabel-fitting3](#multiclass-vs-multilabel-fitting)
 
 ## Author
 
