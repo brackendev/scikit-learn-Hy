@@ -28,7 +28,11 @@ $ pytest scikit_learn_tests.py
 Next, follow the introduction below. Alternatively, the sample code in the introduction can also be executed in the Hy REPL by importing the `scikit_learn` Hy module. For example:
 
 ```hy
+$ source env/bin/activate
+$ hy
+hy 0.17.0+80.g45bb0ff using CPython(default) 3.7.4 on Darwin
 => (import scikit_learn)
+Welcome to scikit-learn-Hy!
 => (scikit-learn.learning-and-predicting)
 array([8])
 ```
