@@ -25,7 +25,9 @@ $ pytest scikit_learn_tests.py
 
 ## Example Usage
 
-Next, follow the introduction below. Alternatively, the sample code in the introduction can also be executed in the Hy REPL by importing the `scikit_learn` Hy module. For example:
+Next, follow the introduction below.
+
+Additionally, the sample code in the introduction is also available in the `scikit_learn` Hy module. To execute it, for example:
 
 ```hy
 $ source env/bin/activate
