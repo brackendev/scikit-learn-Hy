@@ -111,3 +111,5 @@
   (import shutil multiprocessing)
   (setv python_path (.which shutil "python3.7"))
   (.set_executable multiprocessing python_path))
+
+(print "Welcome to scikit-learn-Hy!")
