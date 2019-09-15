@@ -27,7 +27,7 @@ $ pytest scikit_learn_tests.py
 
 Next, follow the introduction below.
 
-Additionally, the sample code in the introduction is also available in the `scikit_learn` Hy module. To execute it, for example:
+Additionally, the example code in the introduction is also available in the `scikit_learn` Hy module. To execute it, for example:
 
 ```hy
 $ source env/bin/activate
@@ -39,7 +39,19 @@ Welcome to scikit-learn-Hy!
 array([8])
 ```
 
-See the `scikit_learn.hy` file for all available functions.
+All available example functions:
+* `learning-and-predicting`
+* `model-persistence`
+* `model-persistence-from-file`
+* `type-casting-32`
+* `type-casting-64`
+* `type-casting-more1`
+* `type-casting-more2`
+* `refitting-and-updating-parameters1`
+* `refitting-and-updating-parameters2`
+* `multiclass-vs-multilabel-fitting1`
+* `multiclass-vs-multilabel-fitting2`
+* `multiclass-vs-multilabel-fitting3`
 
 ## Author
 
