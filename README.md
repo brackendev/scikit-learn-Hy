@@ -37,6 +37,8 @@ Welcome to scikit-learn-Hy!
 array([8])
 ```
 
+See the `scikit_learn.hy` file for all available functions.
+
 ## Author
 
 [brackendev](https://www.github.com/brackendev)
