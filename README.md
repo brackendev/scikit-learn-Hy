@@ -16,6 +16,13 @@ $ source env/bin/activate
 $ pip install -r requirements.txt
 ```
 
+To run the tests, execute:
+
+```bash
+$ pytest scikit_learn_tests.py
+$ pip install -r requirements.txt
+```
+
 ## Example Usage
 
 Via a command shell (in the project directory), open a Hy REPL. For example:
