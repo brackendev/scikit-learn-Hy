@@ -258,7 +258,7 @@ array([8])
 
 The corresponding image is:
 
-<a href="https://scikit-learn.org/stable/auto_examples/datasets/plot_digits_last_image.html"><image src="https://scikit-learn.org/stable/_images/sphx_glr_plot_digits_last_image_001.png" width=50%></a>
+<a href="https://scikit-learn.org/stable/auto_examples/datasets/plot_digits_last_image.html"><img src="https://scikit-learn.org/stable/_images/sphx_glr_plot_digits_last_image_001.png" width=50%></a>
 
 As you can see, it is a challenging task: after all, the images are of poor
 resolution. Do you agree with the classifier?
