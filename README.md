@@ -6,6 +6,14 @@ scikit-learn-Hy
 * [Hy 0.17.0](http://hylang.org/) and [Python 3.7](https://www.python.org/downloads/release/python-370/) reference platform.
 * Examples are in Hy and tests are in Python (to showcase Hy module support).
 
+## Author
+
+[brackendev](https://www.github.com/brackendev)
+
+## License
+
+scikit-learn-Hy is released under the BSD 3-Clause license. See the `LICENSE` file for more info.
+
 ## Installation
 
 It is assumed that [Python 3.7](https://www.python.org/downloads/release/python-370/) and [virtualenv](https://virtualenv.pypa.io/) are installed. Via a command shell (in the project directory), execute:
@@ -23,11 +31,11 @@ $ source env/bin/activate
 $ pytest scikit_learn_tests.py
 ```
 
-## Example Usage
+## Usage
 
 Follow the [introduction](#an-introduction-to-machine-learning-with-scikit-learn-and-hy) below.
 
-Additionally, the example code in the introduction is also available in the `scikit_learn` Hy module. To execute it, for example:
+Additionally, the example code in the introduction is also available in the `scikit_learn` Hy module. For example:
 
 ```hy
 $ source env/bin/activate
@@ -52,14 +60,6 @@ All available example functions:
 * [multiclass-vs-multilabel-fitting1](#multiclass-vs-multilabel-fitting)
 * [multiclass-vs-multilabel-fitting2](#multiclass-vs-multilabel-fitting)
 * [multiclass-vs-multilabel-fitting3](#multiclass-vs-multilabel-fitting)
-
-## Author
-
-[brackendev](https://www.github.com/brackendev)
-
-## License
-
-scikit-learn-Hy is released under the BSD 3-Clause license. See the `LICENSE` file for more info.
 
 - - -
 
