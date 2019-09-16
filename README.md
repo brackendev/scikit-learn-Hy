@@ -311,7 +311,7 @@ Later, you can reload the pickled model (possibly in another Hy process)
 with:
 
 ```hy
-=> (setv clf (load "filename.joblib")
+=> (setv clf (load "filename.joblib"))
 ```
 
 ##### Note:
