@@ -33,7 +33,7 @@ $ pytest scikit_learn_tests.py
 
 ## Usage
 
-Follow the [introduction](#an-introduction-to-machine-learning-with-scikit-learn-and-hy) below.
+Follow the [introduction](#an-introduction-to-machine-learning-with-scikit-learn-and-hy) below this **Usage** section.
 
 Additionally, the example code in the introduction is also available in the `scikit_learn` Hy module. For example:
 
