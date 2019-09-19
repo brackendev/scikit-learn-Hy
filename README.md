@@ -35,7 +35,7 @@ $ pytest scikit_learn_tests.py
 
 Follow [An introduction to machine learning with scikit-learn and Hy](#an-introduction-to-machine-learning-with-scikit-learn-and-hy) below this **Usage** section.
 
-Additionally, the example code in the [introduction](#an-introduction-to-machine-learning-with-scikit-learn-and-hy) is also available in the `scikit_learn` Hy module. For example:
+Additionally, the example code in the [introduction](#an-introduction-to-machine-learning-with-scikit-learn-and-hy) is also available in this project's `scikit_learn` Hy module. For example:
 
 ```hy
 $ source env/bin/activate
