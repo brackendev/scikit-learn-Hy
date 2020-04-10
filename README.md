@@ -78,13 +78,13 @@ data), it is said to have several attributes or **features**.
 
 Learning problems fall into a few categories:
 
- * [supervised learning](https://en.wikipedia.org/wiki/Supervised_learning)
+ * [Supervised learning](https://en.wikipedia.org/wiki/Supervised_learning)
    in which the data comes with additional attributes that we want to predict
    ([Click here](https://scikit-learn.org/stable/supervised_learning.html#supervised-learning)
    to go to the scikit-learn supervised learning page). This problem
    can be either:
 
-    * [classification](https://en.wikipedia.org/wiki/Classification_in_machine_learning):
+    * [Classification](https://en.wikipedia.org/wiki/Classification_in_machine_learning):
       samples belong to two or more classes and we
       want to learn from already labeled data how to predict the class
       of unlabeled data. An example of a classification problem would
@@ -95,13 +95,13 @@ Learning problems fall into a few categories:
       limited number of categories and for each of the n samples provided,
       one is to try to label them with the correct category or class.
 
-    * [regression](https://en.wikipedia.org/wiki/Regression_analysis):
+    * [Regression](https://en.wikipedia.org/wiki/Regression_analysis):
       if the desired output consists of one or more
       continuous variables, then the task is called *regression*. An
       example of a regression problem would be the prediction of the
       length of a salmon as a function of its age and weight.
 
- * [unsupervised learning](https://en.wikipedia.org/wiki/Unsupervised_learning),
+ * [Unsupervised learning](https://en.wikipedia.org/wiki/Unsupervised_learning),
    in which the training data consists of a set of input vectors x
    without any corresponding target values. The goal in such problems
    may be to discover groups of similar examples within the data, where
@@ -109,9 +109,8 @@ Learning problems fall into a few categories:
    or to determine the distribution of data within the input space, known as
    [density estimation](https://en.wikipedia.org/wiki/Density_estimation), or
    to project the data from a high-dimensional space down to two or three
-   dimensions for the purpose of *visualization*
-   ([Click here](https://scikit-learn.org/stable/unsupervised_learning.html#unsupervised-learning)
-   to go to the Scikit-Learn unsupervised learning page).
+   dimensions for the purpose of *visualization*. ([Click here](https://scikit-learn.org/stable/unsupervised_learning.html#unsupervised-learning)
+   to go to the Scikit-Learn unsupervised learning page.)
 
 #### Training set and testing set
 
