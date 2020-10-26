@@ -484,3 +484,12 @@ In this case, the classifier is fit upon instances each assigned multiple labels
 The [MultiLabelBinarizer](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.MultiLabelBinarizer.html#sklearn.preprocessing.MultiLabelBinarizer) is
 used to binarize the 2d array of multilabels to ``fit`` upon. As a result,
 ``predict`` returns a 2d array with multiple predicted labels for each instance.
+
+- - -
+
+## Useful Links
+
+* [/r/hylang](https://www.reddit.com/r/hylang/) [Reddit]
+* [#hylang](https://twitter.com/hashtag/hylang?f=live) [Twitter]
+* [hylang.org](http://hylang.org/)
+* [A Lisp Programmer Living in Python-Land: The Hy Programming Language](https://leanpub.com/hy-lisp-python), Mark Watson
