@@ -489,6 +489,7 @@ used to binarize the 2d array of multilabels to ``fit`` upon. As a result,
 
 ## Useful Links
 
+* [hy](https://github.com/hylang/hy) [GitHub]
 * [/r/hylang](https://www.reddit.com/r/hylang/) [Reddit]
 * [#hylang](https://twitter.com/hashtag/hylang?f=live) [Twitter]
 * [hylang.org](http://hylang.org/)
