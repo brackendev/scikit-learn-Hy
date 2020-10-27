@@ -3,7 +3,7 @@ scikit-learn-Hy
 
 **An introduction to [scikit-learn](https://www.scikit-learn.org/) (machine learning in Python) and [Hy](https://www.github.com/hylang/hy/) (a Lisp dialect embedded in Python).**
 
-* [Hy 0.17.0](http://hylang.org/) and [Python 3.7](https://www.python.org/downloads/release/python-370/) reference platform.
+* [Hy 0.19.0](https://github.com/hylang/hy) and [Python 3.7](https://www.python.org/downloads/release/python-377/) reference platform.
 * Examples are in Hy and tests are in Python (to showcase Hy module support).
 
 ## Author
@@ -16,18 +16,15 @@ scikit-learn-Hy is released under the BSD 3-Clause license. See the `LICENSE` fi
 
 ## Installation
 
-It is assumed that [Python 3.7](https://www.python.org/downloads/release/python-370/) and [virtualenv](https://virtualenv.pypa.io/) are installed. Via a command shell (in the project directory), execute:
+It is assumed that [Python 3.7](https://www.python.org/downloads/release/python-377/) and [pyenv](https://github.com/pyenv/pyenv) are installed. Via a command shell in the project directory, execute:
 
 ```bash
-$ virtualenv env -p python3.7
-$ source env/bin/activate
 $ pip install -r requirements.txt
 ```
 
 To run the tests, execute:
 
 ```bash
-$ source env/bin/activate
 $ pytest scikit_learn_tests.py
 ```
 
@@ -38,11 +35,11 @@ Follow [An introduction to machine learning with scikit-learn and Hy](#an-introd
 Additionally, the example code in the [introduction](#an-introduction-to-machine-learning-with-scikit-learn-and-hy) is also available in this project's `scikit_learn` Hy module. For example:
 
 ```hy
-$ source env/bin/activate
 $ hy
-hy 0.17.0+80.g45bb0ff using CPython(default) 3.7.4 on Darwin
+hy 0.19.0+5.gd6af7c4 using CPython(default) 3.7.7 on Darwin
 => (import scikit_learn)
 Welcome to scikit-learn-Hy!
+
 => (scikit-learn.learning-and-predicting)
 array([8])
 ```
@@ -135,7 +132,6 @@ load the ``iris`` and ``digits`` datasets.  Our notational convention is that
 REPL prompt:
 
 ```hy
-$ source env/bin/activate
 $ hy
 => (import [sklearn [datasets]])
 => (setv iris (datasets.load-iris))
@@ -238,12 +234,9 @@ the last item from ``digits.data``:
 
 ```hy
 => (defn all-but-last [lst]
-...   (list (drop-last 1 lst)))
+... (list (drop-last 1 lst)))
 => (clf.fit (all-but-last digits.data) (all-but-last digits.target))
-SVC(C=100, cache_size=200, class_weight=None, coef0=0.0,
-    decision_function_shape='ovr', degree=3, gamma=0.001, kernel='rbf',
-    max_iter=-1, probability=False, random_state=None, shrinking=True,
-    tol=0.001, verbose=False)
+SVC(C=100, gamma=0.001)
 ```
 
 Now you can *predict* new values. In this case, you'll predict using the last
@@ -280,10 +273,7 @@ persistence model, [pickle](https://docs.python.org/2/library/pickle.html):
 => (setv x iris.data)
 => (setv y iris.target)
 => (clf.fit x y)
-SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0,
-    decision_function_shape='ovr', degree=3, gamma='scale', kernel='rbf',
-    max_iter=-1, probability=False, random_state=None, shrinking=True,
-    tol=0.001, verbose=False)
+SVC()
     
 => (import pickle)
 => (setv s (pickle.dumps clf))
@@ -337,7 +327,6 @@ Unless otherwise specified, input will be cast to ``float64``:
 ```hy
 => (import [numpy :as np])
 => (import [sklearn [random_projection]])
-
 => (setv rng (np.random.RandomState 0))
 => (setv x (np.array (rng.rand 10 2000) :dtype "float32"))
 => (print x.dtype)
@@ -361,19 +350,13 @@ maintained:
 => (setv iris (datasets.load-iris))
 => (setv clf (SVC :gamma "scale"))
 => (clf.fit iris.data iris.target)
-SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0,
-    decision_function_shape='ovr', degree=3, gamma='scale', kernel='rbf',
-    max_iter=-1, probability=False, random_state=None, shrinking=True,
-    tol=0.001, verbose=False)
+SVC()
     
 => (list (clf.predict (list (take 3 iris.data))))
 [0, 0, 0]
 
 => (clf.fit iris.data (. iris target-names [iris.target]))
-SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0,
-    decision_function_shape='ovr', degree=3, gamma='scale', kernel='rbf',
-    max_iter=-1, probability=False, random_state=None, shrinking=True,
-    tol=0.001, verbose=False)
+SVC()
     
 => (list (clf.predict (list (take 3 iris.data))))
 ['setosa', 'setosa', 'setosa']
@@ -397,20 +380,20 @@ once will overwrite what was learned by any previous ``fit``:
 => (setv y (last (load-iris :return_X_y True)))
 => (setv clf (SVC :gamma "auto"))
 => (clf.set-params :kernel "linear")
+SVC(gamma='auto', kernel='linear')
+
 => (clf.fit x y)
-SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0,
-    decision_function_shape='ovr', degree=3, gamma='auto', kernel='linear',
-    max_iter=-1, probability=False, random_state=None, shrinking=True,
-    tol=0.001, verbose=False)
+SVC(gamma='auto', kernel='linear')
+
 => (clf.predict (list (take 5 x)))
 array([0, 0, 0, 0, 0])
 
 => (clf.set-params :kernel "rbf" :gamma "scale")
+SVC()
+
 => (clf.fit x y)
-SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0,
-    decision_function_shape='ovr', degree=3, gamma='scale', kernel='rbf',
-    max_iter=-1, probability=False, random_state=None, shrinking=True,
-    tol=0.001, verbose=False)
+SVC()
+
 => (clf.predict (list (take 5 x)))
 array([0, 0, 0, 0, 0])
 ```
@@ -430,14 +413,16 @@ the target data fit upon:
 => (import [sklearn.svm [SVC]])
 => (import [sklearn.multiclass [OneVsRestClassifier]])
 => (import [sklearn.preprocessing [LabelBinarizer]])
-
 => (setv x '((1 2) (2 4) (4 5) (3 2) (3 1)))
 => (setv y '(0 0 1 1 2))
-
 => (setv clf (SVC :gamma "scale" :random-state 0))
 => (setv classif (OneVsRestClassifier :estimator clf))
 => (classif.fit x y)
+OneVsRestClassifier(estimator=SVC(random_state=0))
+
 => (classif.fit x y)
+OneVsRestClassifier(estimator=SVC(random_state=0))
+
 => (classif.predict x)
 array([0, 0, 1, 1, 2])
 ```
@@ -450,6 +435,8 @@ It is also possible to fit upon a 2d array of binary label indicators:
 => (setv y (LabelBinarizer))
 => (setv y (y.fit_transform '(0 0 1 1 2)))
 => (classif.fit x y)
+OneVsRestClassifier(estimator=SVC(random_state=0))
+
 => (classif.predict x)
 array([[1, 0, 0],
        [1, 0, 0],
@@ -472,6 +459,8 @@ is similarly possible for an instance to be assigned multiple labels:
 => (setv y (MultiLabelBinarizer))
 => (setv y (y.fit_transform '((0 1) (0 2) (1 3) (0 2 3) (2 4))))
 => (classif.fit x y)
+OneVsRestClassifier(estimator=SVC(random_state=0))
+
 => (classif.predict x)
 array([[1, 1, 0, 0, 0],
        [1, 0, 1, 0, 0],
@@ -484,13 +473,3 @@ In this case, the classifier is fit upon instances each assigned multiple labels
 The [MultiLabelBinarizer](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.MultiLabelBinarizer.html#sklearn.preprocessing.MultiLabelBinarizer) is
 used to binarize the 2d array of multilabels to ``fit`` upon. As a result,
 ``predict`` returns a 2d array with multiple predicted labels for each instance.
-
-- - -
-
-## Useful Links
-
-* [hy](https://github.com/hylang/hy) [GitHub]
-* [/r/hylang](https://www.reddit.com/r/hylang/) [Reddit]
-* [#hylang](https://twitter.com/hashtag/hylang?f=live) [Twitter]
-* [hylang.org](http://hylang.org/)
-* [A Lisp Programmer Living in Python-Land: The Hy Programming Language](https://leanpub.com/hy-lisp-python), Mark Watson
