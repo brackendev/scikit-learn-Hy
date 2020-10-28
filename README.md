@@ -60,10 +60,10 @@ Available example functions:
 
 - - -
 
-An introduction to machine learning with scikit-learn and Hy
+An Introduction to Machine Learning with scikit-learn and Hy
 ===
 
-Machine learning: the problem setting
+Machine Learning: The Problem Setting
 -------------------------------------
 
 In general, a learning problem considers a set of n
@@ -109,7 +109,7 @@ Learning problems fall into a few categories:
    dimensions for the purpose of *visualization*. ([Click here](https://scikit-learn.org/stable/unsupervised_learning.html#unsupervised-learning)
    to go to the Scikit-Learn unsupervised learning page.)
 
-#### Training set and testing set
+#### Training Set and Testing Set
 
 Machine learning is about learning some properties of a data set
     and then testing those properties against another data set. A common
@@ -119,7 +119,7 @@ Machine learning is about learning some properties of a data set
     we test the learned properties.
 
 
-Loading an example dataset
+Loading an Example Dataset
 --------------------------
 
 `scikit-learn` comes with a few standard datasets, for instance the
@@ -168,7 +168,7 @@ learn:
 [0 1 2 ... 8 9 8]
 ```
 
-#### Shape of the data arrays
+#### Shape of the Data Arrays
 
 The data is always a 2D array, shape ``(n_samples n_features)``, although
     the original data may have had a different shape. In the case of the
@@ -191,11 +191,11 @@ The [simple example on this dataset](https://scikit-learn.org/stable/auto_exampl
     from the original problem one can shape the data for consumption in
     scikit-learn.
 
-#### Loading from external datasets
+#### Loading from External Datasets
 
 To load from an external dataset, please refer to [loading external datasets](https://scikit-learn.org/stable/datasets/index.html#external-datasets).
 
-Learning and predicting
+Learning and Predicting
 ------------------------
 
 In the case of the digits dataset, the task is to predict, given an image,
@@ -218,7 +218,7 @@ For now, we will consider the estimator as a black box:
 => (setv clf (SVC :gamma 0.001 :C 100))
 ```
 
-#### Choosing the parameters of the model
+#### Choosing the Parameters of the Model
 
   In this example, we set the value of ``gamma`` manually.
   To find good values for these parameters, we can use tools
@@ -260,7 +260,7 @@ example that you can run and study:
 [Recognizing hand-written digits](https://scikit-learn.org/stable/auto_examples/classification/plot_digits_classification.html#sphx-glr-auto-examples-classification-plot-digits-classification-py).
 
 
-Model persistence
+Model Persistence
 -----------------
 
 It is possible to save a model in scikit-learn by using Python's built-in
@@ -320,7 +320,7 @@ Conventions
 scikit-learn estimators follow certain rules to make their behavior more
 predictive.  These are described in more detail in the [Glossary of Common Terms and API Elements](https://scikit-learn.org/stable/glossary.html#glossary).
 
-#### Type casting
+#### Type Casting
 
 Unless otherwise specified, input will be cast to ``float64``:
 
@@ -366,7 +366,7 @@ Here, the first ``predict`` returns an integer array, since ``iris.target``
 (an integer array) was used in ``fit``. The second ``predict`` returns a string
 array, since ``iris.target_names`` was for fitting.
 
-#### Refitting and updating parameters
+#### Refitting and Updating Parameters
 
 Hyper-parameters of an estimator can be updated after it has been constructed
 via the [set_params](https://scikit-learn.org/stable/glossary.html#term-set-params) method. Calling ``fit`` more than
@@ -403,7 +403,7 @@ Here, the default kernel ``rbf`` is first changed to ``linear`` via
 been constructed, and changed back to ``rbf`` to refit the estimator and to
 make a second prediction.
 
-#### Multiclass vs. multilabel fitting
+#### Multiclass vs. Multilabel Fitting
 
 When using [multiclass classifiers](https://scikit-learn.org/stable/modules/classes.html#module-sklearn.multiclass),
 the learning and prediction task that is performed is dependent on the format of
