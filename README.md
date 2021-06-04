@@ -3,12 +3,16 @@ scikit-learn-Hy
 
 **An introduction to [scikit-learn](https://www.scikit-learn.org/) (machine learning in Python) and [Hy](https://www.github.com/hylang/hy/) (a Lisp dialect embedded in Python).**
 
-* [Hy 0.19.0](https://github.com/hylang/hy) and [Python 3.7](https://www.python.org/downloads/release/python-377/) reference platform.
-* Examples are in Hy and tests are in Python (to showcase Hy module support).
+* [Hy 0.20.0](https://github.com/hylang/hy) and [Python 3.7](https://www.python.org/downloads/release/python-377/) reference platform.
+* Examples are in Hy and tests are in Python (to demonstrate Hy module support).
 
 ## Author
 
-[brackendev](https://www.github.com/brackendev)
+Bracken Spencer
+
+* [GitHub](https://www.github.com/brackendev)
+* [LinkedIn](https://www.linkedin.com/in/brackenspencer/)
+* [Twitter](https://twitter.com/brackendev)
 
 ## License
 
@@ -36,7 +40,7 @@ Additionally, the example code in the [introduction](#an-introduction-to-machine
 
 ```hy
 $ hy
-hy 0.19.0+5.gd6af7c4 using CPython(default) 3.7.7 on Darwin
+hy 0.20.0 using CPython(default) 3.7.7 on Darwin
 => (import scikit_learn)
 Welcome to scikit-learn-Hy!
 
@@ -240,7 +244,7 @@ SVC(C=100, gamma=0.001)
 ```
 
 Now you can *predict* new values. In this case, you'll predict using the last
-image from ``digits.data``. By predicting, you'll determine the image from the 
+image from ``digits.data``. By predicting, you'll determine the image from the
 training set that best matches the last image.
 
 ```hy
@@ -274,7 +278,7 @@ persistence model, [pickle](https://docs.python.org/2/library/pickle.html):
 => (setv y iris.target)
 => (clf.fit x y)
 SVC()
-    
+
 => (import pickle)
 => (setv s (pickle.dumps clf))
 => (setv clf2 (pickle.loads s))
@@ -351,13 +355,13 @@ maintained:
 => (setv clf (SVC :gamma "scale"))
 => (clf.fit iris.data iris.target)
 SVC()
-    
+
 => (list (clf.predict (list (take 3 iris.data))))
 [0, 0, 0]
 
 => (clf.fit iris.data (. iris target-names [iris.target]))
 SVC()
-    
+
 => (list (clf.predict (list (take 3 iris.data))))
 ['setosa', 'setosa', 'setosa']
 ```
