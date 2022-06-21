@@ -9,7 +9,7 @@ hy==0.20.0
 importlib-metadata==0.22
 joblib==0.13.2
 more-itertools==7.2.0
-numpy==1.17.2
+numpy==1.22.0
 packaging==19.1
 pluggy==0.13.0
 py==1.10.0
