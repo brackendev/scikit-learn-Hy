@@ -6,6 +6,11 @@ scikit-learn-Hy
 * [Hy 0.20.0](https://github.com/hylang/hy) and [Python 3.7](https://www.python.org/downloads/release/python-377/) reference platform.
 * Examples are in Hy and tests are in Python (to demonstrate Hy module support).
 
+## TODO
+
+- [ ] Support latest Hy release
+- [ ] Support latest Python release
+
 ## Author
 
 Bracken Spencer
