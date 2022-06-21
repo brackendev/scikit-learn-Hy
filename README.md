@@ -8,8 +8,9 @@ scikit-learn-Hy
 
 ## TODO
 
-- [ ] Support latest Hy release
-- [ ] Support latest Python release
+- [ ] Support the latest Hy release.
+- [ ] Support the latest Python release.
+- [ ] Support the latest scikit-learn release.
 
 ## Author
 
